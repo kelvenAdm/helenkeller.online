@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<title>Exterminador de estrias</title>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="style.css">
-  <title>Tudo Pronto!</title>
 
-<!-- Meta Pixel Code -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="favicon.jpg">
+<style>
+  <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -23,23 +24,103 @@ fbq('track', 'Precell');
 src="https://www.facebook.com/tr?id=720955029167921&ev=Precell&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-
+    header {
+      background:"headerbg2.png";
+      background-repeat: no-repeat;
+    }
+    @font-face {
+      font-family: Gotham Rounded;
+      src: url("font.otf") format("opentype");
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      font-family: Gotham Rounded;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background: url("fundo.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .container {
+      width: 700px;
+      max-width: 90%;
+    }
+    .black {
+      background-color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 0 10px 2px black;
+    }
+    .answer {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+    }
+    @media (max-width: 991px) {
+      .answer {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+      }
+    }
+    .btn {
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-size: 30px;
+      background-color: #f7ce6a;
+      outline: none;
+      text-decoration: none;
+      color: white;
+    }
+    .white h1 {
+      color: yellow;
+    }
+    .white p {
+      font-size: 18px;
+      color: white;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
 </head>
-<body> 
-  <div class="container">
-    <div class="black">
-      <div>
-        <div class="question">
-          <h1>Tudo Pronto!</h1>
-          <p>Clique no botão abaixo para continuar</p>
-        </div>
-        <div class="answer">
-          <a class="btn" href="https://helenkeller.online/s">CONTINUAR</a>
-        </div>
-      </div>    
-    </div>
-    <p style="text-align: center; font-weight: bold;">© 2022 – Todos os direitos reservados. Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
-  </div>
-  <script type="text/javascript" src="script.js"></script>
+<body>
+
+<div class="container">
+<div class="black">
+<div id="primeira">
+<div class="question">
+<h1>Questão 1</h1>
+<p>Você Quer Eliminar as Estrias?</p>
+<div class="answer">
+<button class="btn" onclick="redirect()">SIM</button>
+<button class="btn" onclick="redirect()">NÃO</button>
+</div>
+</div>
+</div>
+<p style="text-align: center; font-weight: bold;">© 2022 – © Todos os direitos reservados - Termos de Uso • Políticas de Privacidade.</p>
+</div>
+<script>
+    function segunda() {
+      document.getElementById("primeira").classList.add("hide")
+      document.getElementById("segunda").classList.remove("hide")
+    }
+    function terceira() {
+      document.getElementById("segunda").classList.add("hide")
+      document.getElementById("terceira").classList.remove("hide")
+    }
+    function redirect() {
+      location.href = "https://helenkeller.online/s/"
+    }
+  </script>
 </body>
 </html>
